@@ -14,19 +14,25 @@ function NoteForm({ onAdd }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Judul"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        required
-      />
-      <textarea
-        placeholder="Isi catatan"
-        value={body}
-        onChange={(e) => setBody(e.target.value)}
-        required
-      />
+      <div>
+        <label htmlFor="title">Judul:</label>
+        <input
+          type="text"
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="body">Isi:</label>
+        <textarea
+          id="body"
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          required
+        />
+      </div>
       <button type="submit">Tambah</button>
     </form>
   );

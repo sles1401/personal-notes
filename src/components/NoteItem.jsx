@@ -7,7 +7,6 @@ function NoteItem({ id, title, body, createdAt, onDelete }) {
       <h3>{title}</h3>
       <small>{new Date(createdAt).toLocaleString()}</small>
       <p>{body}</p>
-      <button onClick={() => onDelete(id)}>Hapus</button>
     </div>
   );
 }
