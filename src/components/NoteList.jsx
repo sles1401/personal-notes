@@ -11,7 +11,9 @@ function NoteList({ notes, onDelete, onArchive }) {
     <div>
       {notes.map((note) => (
         <div key={note.id} style={{ border: '1px solid #ddd', padding: '12px', marginBottom: '8px' }}>
+          {/* Tampilkan NoteItem */}
           <NoteItem {...note} />
+
           <div style={{ marginTop: '8px' }}>
             <button onClick={() => onDelete(note.id)} style={{ marginRight: '8px' }}>
               Hapus
